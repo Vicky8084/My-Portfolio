@@ -8,7 +8,6 @@ Welcome to my personal portfolio website! This repository hosts the code for my 
 
 - [About](#about)
 - [Design Philosophy](#design-philosophy)
-- [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation and Setup](#installation-and-setup)
 - [Project Structure](#project-structure)
@@ -40,12 +39,13 @@ This portfolio is crafted with a focus on **cleanliness, professionalism, and re
 ## Features
 
 * **Responsive Design:** Optimized for seamless viewing across all devices (desktops, tablets, and mobile phones).
-* **Hero Section:** An engaging introduction to my profile with a compelling call to action.
+* **Hero Section:** An engaging introduction to my profile with compelling calls to action, including an option to **download my resume**.
 * **About Me:** Detailed information about my background, education, and passions.
 * **Skills Section:** A clear breakdown of my technical proficiencies, including programming languages, web technologies, and databases, presented in an easy-to-digest card format.
 * **Projects Showcase:** A dynamic slider (powered by Swiper.js) featuring key projects with concise descriptions and direct links to their GitHub repositories.
 * **Contact Form:** A functional contact form with a success pop-up message for user feedback, ensuring a smooth communication channel.
 * **Social Links:** Easy access to my professional social media profiles.
+* **Resume Download:** Direct link to download my professional resume in PDF format.
 
 ---
 
@@ -73,12 +73,17 @@ To get a local copy of this project up and running, follow these simple steps:
     ```bash
     cd My-Portfolio
     ```
-3.  **Open `index.html`:**
+3.  **Add Your Resume:**
+    * Place your resume file (e.g., `Vicky_Gupta_Resume.pdf`) directly into the `My-Portfolio` root directory.
+    * **Important:** Ensure the filename matches the `href` attribute in `index.html` (currently set to `Vicky_Gupta_Resume.pdf`).
+4.  **Open `index.html`:**
     Simply open the `index.html` file in your preferred web browser. All necessary CSS and JavaScript files are linked locally.
 
 **Note on Contact Form:** The contact form currently simulates a successful submission and does not send actual emails. For a live deployment, you would need to integrate a backend service (e.g., Formspree, Netlify Forms, or a custom API endpoint) to handle form submissions. Update the `action` attribute in the contact form in `index.html` accordingly.
 
 ---
+
+
 ## Contact
 
 Feel free to connect with me through the following channels:
