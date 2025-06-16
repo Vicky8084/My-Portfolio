@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicky Gupta | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">Vicky Gupta</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="section-content">
+                <div class="hero-details">
+                    <h2 class="title">Hello, I'm Vicky Gupta</h2>
+                    <h3 class="subtitle">A passionate Software Engineer</h3>
+                    <p class="description">
+                        Welcome to my digital space! I specialize in JAVA, Data Structure & Algorithm, Spring/Spring Boot, JPA, Hibernate, 
+                        SQL/MySQL and love building impactful solutions.
+                    </p>
+
+                    <div class="buttons">
+                        <a href="#projects" class="button primary-button">View My Work</a>
+                        <a href="#contact" class="button secondary-button">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="images/profile-hero.png" alt="Your Profile Picture" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="section-content">
+                <div class="about-image-wrapper">
+                    <img src="images/about-me.jpg" alt="About Me Image" class="about-image">
+                </div>
+                <div class="about-details">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="text">
+                        I'm a motivated and aspiring software developer, currently pursuing my Master of Computer 
+                        Applications (MCA). I hold a strong academic record from my Bachelor of Computer 
+                        Applications (BCA) with an 8.5 CGPA, and I'm eagerly awaiting the results of my first MCA 
+                        semester. My journey in software development began with a curiosity for how technology 
+                        shapes our world and solves real-life challenges. I thrive on solving complex problems and 
+                        am passionate about creating intuitive, efficient, and user-friendly applications. When I'm 
+                        not coding, you can find me exploring new tech trends and expanding my knowledge base.
+                    </p>
+                   <div class="social-link-list">
+                        <a href="https://x.com/Its_vick01" class="social-link" aria-label="Twitter/X" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/vickygupta01/" class="social-link" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Vicky8084" class="social-link" aria-label="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.geeksforgeeks.org/user/vickygupta01/" class="social-link" aria-label="GeeksforGeeks Profile" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-graduation-cap"></i></a></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section" id="skills">
+    <h2 class="section-title">My Skills</h2>
+    <div class="section-content">
+        <ul class="skills-list">
+            <li class="skill-item">
+                <i class="fa-solid fa-code"></i>
+                <h3 class="name">Programming Languages</h3>
+                <p class="text">JAVA, C, C++(Basic), Python</p>
+            </li>
+            <li class="skill-item">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3 class="name">Web Technologies</h3>
+                <p class="text">HTML5, CSS3, JavaScript</p>
+            </li>
+            <li class="skill-item">
+                <i class="fa-solid fa-database"></i>
+                <h3 class="name">Databases</h3>
+                <p class="text">SQL (PostgreSQL, MySQL), MongoDB(Basics)</p>
+            </li>
+        </ul>
+    </div>
+</section>
+                
+        <section class="projects-section" id="projects">
+             <h2 class="section-title">My Projects</h2>
+             <div class="section-content">
+                <div class="slider-container swiper">
+                    <div class="slider-wrapper">
+                        <ul class="projects-list swiper-wrapper">
+                            <li class="project-item swiper-slide">
+                                <h3 class="name">Library Management System (Backend)</h3>
+                                <p class="description"> Developed a robust backend application for comprehensive 
+                                    library operations, including book issuance, returns, and student record management.
+                                    Java, Spring Boot, REST API, MySQL, JPA, Hibernate, Postman, Maven.</p>
+                                <a href="https://github.com/Vicky8084/Student-Management-DB" class="project-link" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                            </li>
+                            <li class="project-item swiper-slide">
+                                <h3 class="name">Job Portal Backend (with AI Integration via Gemini)</h3>
+                                <p class="description">Developed a robust and scalable backend system for a modern 
+                                    Job Portal, designed to facilitate efficient connections between job seekers 
+                                    and recruiters. This project notably incorporates AI capabilities through 
+                                    Google Gemini API to enhance core functionalities. Java, Spring Boot, REST API, PostgreSQL, JPA, Hibernate, Postman, Maven.</p>
+                                <a href="https://github.com/Vicky8084/Naukri.com-database" class="project-link" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                            </li>
+                            <li class="project-item swiper-slide">
+                                <h3 class="name">Coffee Shop Website (Frontend)</h3>
+                                <p class="description">Developed a responsive and visually appealing Coffee Shop 
+                                    website to provide an engaging online presence, showcase menu offerings, and 
+                                    enhance customer interaction.</p>
+                                <a href="https://github.com/Vicky8084/Coffee-Web-Page" class="project-link" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                            </li>
+                            <li class="project-item swiper-slide">
+                                <h3 class="name">My Portfolio: Bridging Code and Creativity</h3>
+                                <p class="description">This section offers a look into my development journey, 
+                                    showcasing projects where I've applied my skills in Java, Web Technologies 
+                                    (HTML, CSS, JavaScript), and Databases. Each project highlights my approach to 
+                                    problem-solving, clean code architecture, and commitment to building functional
+                                     and intuitive applications.</p>
+                                <a href="https://github.com/Vicky8084/Portfolio" class="project-link" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                            </li>
+                        </ul>
+
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-slide-button swiper-button-prev"></div>
+                        <div class="swiper-slide-button swiper-button-next"></div>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="section-content">
+                <ul class="contact-info-list">
+                    <li class="contact-info">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>mrvickygupta1111@gmail.com</p>
+                    </li>
+                    <li class="contact-info">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>8084959648</p>
+                    </li>
+                    <li class="contact-info">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Allapuzha, Kerala, Inda</p>
+                    </li>
+                    <li class="contact-info">
+                        <i class="fa-solid fa-clock"></i>
+                        <p>Available for new opportunities</p>
+                    </li>
+                </ul>
+
+                <form action="YOUR_FORM_SUBMISSION_ENDPOINT" class="contact-form" method="POST">
+                    <input type="text" name="name" placeholder="Your name" class="form-input" required>
+                    <input type="email" name="email" placeholder="Your email" class="form-input" required>
+                    <textarea name="message" placeholder="Your message" class="form-input" required></textarea>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer-section">
+            <div class="section-content">
+                <p class="copyright-text">© 2025 Vicky Gupta. All rights reserved.</p>
+                <div class="social-link-list">
+    <a href="https://www.facebook.com/profile.php?id=100024582158291" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com/its_vick.01/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://x.com/Its_vick01" class="social-link" aria-label="Twitter/X" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+</div>
+
+                <p class="policy-text">
+                    <a href="#" class="policy-link">Privacy policy</a>
+                    <span class="seprator">.</span>
+                    <a href="#" class="policy-link">Terms of Service</a>
+                </p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
