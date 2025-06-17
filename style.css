@@ -1,4 +1,4 @@
-/*Importing Google Fonts */
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;600;700&display=swap');
 
 *{
@@ -17,6 +17,9 @@
     --light-bg-color: #f0f4f8; /* Light gray for sections */
     --medium-gray-color: #ccc;
     --text-color: #333; /* General text color */
+    /* Add an accent color if you need it for links/hovers, e.g.: */
+    --accent-color: #007bff; /* Example: A brighter blue for links */
+
 
     /* Font Size */
     --font-size-xs: 0.8rem;
@@ -177,6 +180,7 @@ header .navbar{
 .hero-section .hero-details .buttons {
     display: flex;
     gap: 25px;
+    flex-wrap: wrap; /* Added for responsiveness of buttons */
 }
 
 .hero-section .hero-details .button {
@@ -330,45 +334,7 @@ header .navbar{
     color: var(--light-bg-color); /* Lighter text for skills */
 }
 
-/* --- Responsive Media Queries --- */
-
-/* Responsive media query code for max width 1024px */
-@media screen and (max-width: 1024px){
-    .skills-section .skills-list{
-        gap: 40px; /* Adjusted gap for medium screens */
-    }
-
-    /* Keep 2 items per row on screens between 900px and 1024px */
-    .skills-section .skills-list .skill-item {
-        width: calc(100% / 2 - 20px); /* Changed for 2 items per row with gap */
-    }
-}
-
-/* Responsive media query code for max width 900px */
-@media screen and (max-width: 900px) {
-    /* ... (rest of your 900px breakpoint styles) ... */
-
-    .skills-section .skills-list{
-        gap: 30px; /* Adjusted gap for smaller screens */
-    }
-
-    /* Still 2 items per row, or 1 depending on how the 900px font sizes affect it */
-    .skills-section .skills-list .skill-item {
-        width: calc(100% / 2 - 15px); /* Adjusted for 2 items per row with gap */
-    }
-}
-
-/* Responsive media query code for max width 640px */
-@media  screen and (max-width: 640px) {
-    .skills-section .skills-list{
-        gap: 20px; /* Smaller gap on smallest screens */
-    }
-
-    .skills-section .skills-list .skill-item{
-        width: 100%; /* Full width for single column */
-    }
-}
-/* Projects Section Styling (formerly Testimonials) */
+/* Projects Section Styling */
 .projects-section {
     padding: 50px 0 100px;
     background: var(--light-bg-color);
@@ -392,8 +358,6 @@ header .navbar{
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     min-height: 280px; /* Ensure consistent height for cards without images */
 }
-
-/* Removed .projects-section .project-item .project-image style */
 
 .projects-section .project-item .name{
     margin-bottom: 10px;
@@ -562,6 +526,8 @@ header .navbar{
 }
 
 
+/* --- Responsive Media Queries --- */
+
 /* Responsive media query code for max width 1024px */
 @media screen and (max-width: 1024px){
     .skills-section .skills-list{
@@ -569,6 +535,10 @@ header .navbar{
     }
     .skills-section .skills-list .skill-item {
         width: calc(100% / 3 - 40px);
+    }
+    /* Projects section specific adjustments for 1024px */
+    .projects-section .slider-wrapper {
+        margin: 0 40px 40px; /* Adjust margin for medium screens */
     }
 }
 
@@ -693,43 +663,154 @@ header .navbar{
         width: calc(100% / 2 - 30px);
     }
 
-    /* Projects section specific adjustments */
-    .projects-section .project-item {
-        min-height: 250px; /* Adjusted height for smaller screens */
+    /* Projects section specific adjustments for 900px */
+    .projects-section .slider-wrapper {
+        margin: 0 20px 30px; /* Further adjust margin for smaller tablets */
     }
 
-    .projects-section .slider-wrapper{
-        margin: 0 0 30px;
-    }
-    .projects-section .swiper-slide-button{
-        display: none; /* Hide nav buttons on small screens */
+    /* Hide navigation arrows on smaller screens for touch-friendly swiping */
+    .projects-section .swiper-slide-button {
+        display: none;
     }
 
     .contact-section .section-content{
         align-items: center;
         flex-direction: column-reverse;
     }
-
 }
 
 /* Responsive media query code for max width 640px */
 @media  screen and (max-width: 640px) {
     .skills-section .skills-list{
-        gap: 40px; /* Slightly more gap on smallest screens */
+        gap: 20px; /* Smaller gap on smallest screens */
     }
 
     .skills-section .skills-list .skill-item{
         width: 100%; /* Full width for single column */
     }
 
-    /* Projects section specific adjustments */
-    .projects-section .project-item {
-        min-height: 220px; /* Further adjust height for very small screens */
-        padding: 20px;
+    /* Projects section specific adjustments for 640px */
+    .projects-section .slider-wrapper {
+        margin: 0 0 20px; /* No horizontal margin on very small screens */
     }
-    
+
+    .projects-section .project-item {
+        padding: 20px;
+        min-height: auto; /* Allow height to adjust on very small screens */
+    }
+
     .footer-section .section-content{
         flex-direction: column;
         gap: 20px;
     }
+
+    /* Responsive adjustments for pop-up */
+    .popup-content {
+        max-width: 90%; /* Adjust width for smaller screens */
+        padding: 20px;
+    }
+    .popup-content h2 {
+        font-size: var(--font-size-m);
+    }
+    .close-button {
+        font-size: var(--font-size-l);
+        top: 5px;
+        right: 10px;
+    }
+    .popup-button { /* Added responsive style for the new OK button */
+        padding: 8px 20px;
+        font-size: var(--font-size-s);
+    }
+}
+
+/* Pop-up Styling */
+.success-popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    opacity: 0; /* Start invisible for transition */
+    visibility: hidden; /* Hidden for accessibility */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.success-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background-color: var(--white-color);
+    margin: auto;
+    padding: 30px;
+    border-radius: var(--border-radius-s);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    max-width: 400px; /* Max width of the pop-up */
+    text-align: center;
+    position: relative;
+    transform: translateY(-20px); /* Start slightly above for animation */
+    transition: transform 0.3s ease;
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 15px; /* Space between text and button */
+}
+
+.success-popup.show .popup-content {
+    transform: translateY(0); /* Animate to original position */
+}
+
+.popup-content h2 {
+    color: var(--primary-color);
+    font-size: var(--font-size-l);
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    color: var(--text-color);
+    font-size: var(--font-size-n);
+    line-height: 1.5;
+}
+
+.close-button {
+    color: var(--medium-gray-color);
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--secondary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style for the new OK button in the pop-up */
+.popup-button {
+    padding: 10px 25px;
+    background-color: var(--secondary-color); /* Use your accent color */
+    color: var(--white-color);
+    border: none;
+    border-radius: var(--border-radius-m); /* Rounded like your main buttons */
+    cursor: pointer;
+    font-size: var(--font-size-n);
+    font-weight: var(--font-weight-medium);
+    transition: background-color 0.3s ease;
+}
+
+.popup-button:hover {
+    background-color: var(--primary-color); /* Hover effect to primary color */
 }
